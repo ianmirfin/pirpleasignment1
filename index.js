@@ -106,6 +106,9 @@ handlers.sample = function(data, callback){
 handlers.ping = function(data,callback){
   callback(200);
 };
+handelers.hello = function(data,callback){
+  callback(200,{'WelcomeMessage' : 'Welcome to my pirple Assesment #1 Page'});
+};
 // Not found Handler ie default
 handlers.notFound = function(data, callback){
   callback(404);
