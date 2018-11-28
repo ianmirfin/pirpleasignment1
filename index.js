@@ -106,6 +106,9 @@ handlers.sample = function(data, callback){
 handlers.ping = function(data,callback){
   callback(200);
 };
+handlers.hello = function(data,callback){
+  callback(200,{'WelcomeMessage' : 'Welcome to my pirple Assesment #1 Page'});
+};
 // Not found Handler ie default
 handlers.notFound = function(data, callback){
   callback(404);
@@ -114,5 +117,6 @@ handlers.notFound = function(data, callback){
 // Defining a request router
 var router = {
   'sample' : handlers.sample,
-  'ping' : handlers.ping
+  'ping' : handlers.ping,
+  'hello' : handlers.hello
 };
